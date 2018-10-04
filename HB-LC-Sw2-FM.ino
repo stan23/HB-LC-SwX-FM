@@ -24,8 +24,8 @@
 #define RELAY1_PIN 0 // PB0
 #define RELAY2_PIN 1 // PB1
 
-#define BUTTON1_PIN 31 // PA0
-#define BUTTON2_PIN 30 // PA1
+#define BUTTON1_PIN 24 // PA0
+#define BUTTON2_PIN 25 // PA1
 
 // number of available peers per channel
 // number of available peers per channel
