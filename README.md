@@ -2,7 +2,7 @@
 
 HomeBrew-Version des HM-LC-Sw2-FM bei dem die Tasterkanäle exportiert sind.
 
-Dies basiert auf der hervorragenden Arbeit von [pa-pa](https://github.com/pa-pa/AskSinPP) und  [Jérôme](https://github.com/jp112sdl/Beispiel_AskSinPP).
+Dies basiert auf der hervorragenden Arbeit von [pa-pa](https://github.com/pa-pa/AskSinPP) und [seiner Version](https://github.com/pa-pa/AskSinPP/tree/master/examples/custom/HM-LC-SW2-FM) [für FHEM](https://forum.fhem.de/index.php/topic,76623.msg685237.html#msg685237), und  [Jérôme](https://github.com/jp112sdl/Beispiel_AskSinPP).
 
 
 
