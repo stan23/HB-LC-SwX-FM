@@ -2,4 +2,10 @@
 
 HomeBrew-Version des HM-LC-Sw2-FM bei dem die Tasterkanäle exportiert sind.
 
-Dies basiert auf der hervorragenden Arbeit von [pa-pa](https://github.com/pa-pa/AskSinPP),  [Jérôme](https://github.com/jp112sdl/Beispiel_AskSinPP)
+Dies basiert auf der hervorragenden Arbeit von [pa-pa](https://github.com/pa-pa/AskSinPP) und  [Jérôme](https://github.com/jp112sdl/Beispiel_AskSinPP).
+
+
+
+## CCU-Unterstützung
+
+Benötigt wird das [JP-HB-Devices-addon](https://github.com/jp112sdl/JP-HB-Devices-addon/releases) von Jérôme in Version 1.21 oder später.
