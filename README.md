@@ -6,6 +6,52 @@ Dies basiert auf der hervorragenden Arbeit von [pa-pa](https://github.com/pa-pa/
 
 
 
-## CCU-Unterstützung
 
-Benötigt wird das [JP-HB-Devices-addon](https://github.com/jp112sdl/JP-HB-Devices-addon/releases) von Jérôme in Version 1.21 oder später.
+
+# Hardware
+
+
+
+### Programmieradapter
+- 1x ISP (z.B. [diesen hier](https://www.diamex.de/dxshop/USB-ISP-Programmer-fuer-Atmel-AVR-Rev2))
+
+
+# Software
+
+### Fuses
+High: 0xD0
+Low:  0xA4
+
+`C:\Program Files (x86)\Arduino\hardware\tools\avr\bin> .\avrdude -C ..\etc\avrdude.conf -p m32 -P com7 -c stk500v2 -U lfuse:w:0xA4:m -U hfuse:w:0xD0:m`
+
+### Bootloader
+
+Ein Bootloader wird nicht verwendet.
+
+### Firmware
+
+Benötigt wird die AskSinPP aus dem master-Branch, der V3-Branch ist zu alt.
+
+...
+
+
+### CCU-Unterstützung
+
+Das [JP-HB-Devices-addon](https://github.com/jp112sdl/JP-HB-Devices-addon/releases) von Jérôme in Version 1.21 oder später.
+
+
+# Bauanleitung
+
+...
+
+
+
+# Bilder
+
+...
+
+
+
+[![Creative Commons Lizenzvertrag](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+Dieses Werk ist lizenziert unter einer [Creative Commons Namensnennung - Nicht-kommerziell - Weitergabe unter gleichen Bedingungen 4.0 International Lizenz](http://creativecommons.org/licenses/by-nc-sa/4.0/).
