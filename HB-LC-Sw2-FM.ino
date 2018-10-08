@@ -19,7 +19,7 @@
 #include <Switch.h>
 #include <Remote.h>
 
-// use MightyCore Standard pinout
+// use MightyCore Standard pinout for ATmega32
 
 #define RELAY1_PIN 0 // PB0
 #define RELAY2_PIN 1 // PB1
