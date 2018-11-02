@@ -31,7 +31,7 @@ Ein Bootloader wird nicht verwendet.
 
 ### Firmware
 
-Benötigt werden die Bibliotheken [AskSinPP](https://github.com/pa-pa/AskSinPP) aus dem master-Branch, sowie die [HLW8012](https://github.com/xoseperez/hlw8012), die [EnableInterrupt](https://github.com/GreyGnome/EnableInterrupt) und [Low-Power](https://github.com/rocketscream/Low-Power).
+Benötigt werden die Bibliotheken [AskSinPP](https://github.com/pa-pa/AskSinPP) aus dem master-Branch.
 
 ![Einstellungen IDE](https://github.com/stan23/HB-LC-Sw2-FM/blob/master/Bilder/ArduinoIDE_Auswahl_Controller.png)
 
@@ -51,9 +51,9 @@ Anschließend kann das neue Gerät per Seriennummer an die CCUx angelernt werden
 
 # Bilder
 
-![HM-LC-Sw2-FM geöffnet](https://github.com/stan23/HB-LC-Sw2-FM/blob/master/Bilder/HM-LC-Sw2-FM geöffnet.jpg)
-![Anschluss ISP](https://github.com/stan23/HB-LC-Sw2-FM/blob/master/Bilder/Anschluss ISP.jpg)
-![Pinbelegung ISP](https://github.com/stan23/HB-LC-Sw2-FM/blob/master/Bilder/Pinbelegung ISP.jpg)
+![HM-LC-Sw2-FM geöffnet](https://github.com/stan23/HB-LC-Sw2-FM/blob/master/Bilder/HM-LC-Sw2-FM_geöffnet.jpg)
+![Anschluss ISP](https://github.com/stan23/HB-LC-Sw2-FM/blob/master/Bilder/Anschluss_ISP.jpg)
+![Pinbelegung ISP](https://github.com/stan23/HB-LC-Sw2-FM/blob/master/Bilder/Pinbelegung_ISP.jpg)
 
 
 
