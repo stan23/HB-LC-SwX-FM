@@ -53,7 +53,7 @@ Anschließend kann das neue Gerät per Seriennummer an die CCUx angelernt werden
 
 ![HM-LC-Sw2-FM geöffnet](https://github.com/stan23/HB-LC-Sw2-FM/blob/master/Bilder/HM-LC-Sw2-FM_geöffnet.jpg)
 ![Anschluss ISP](https://github.com/stan23/HB-LC-Sw2-FM/blob/master/Bilder/Anschluss_ISP.jpg)
-![Pinbelegung ISP](https://github.com/stan23/HB-LC-Sw2-FM/blob/master/Bilder/Pinbelegung_ISP.jpg)
+![Pinbelegung ISP](https://github.com/stan23/HB-LC-Sw2-FM/blob/master/Bilder/Pinbelegung_ISP.png)
 
 
 
