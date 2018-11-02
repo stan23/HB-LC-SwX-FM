@@ -31,7 +31,7 @@ Ein Bootloader wird nicht verwendet.
 
 ### Firmware
 
-Benötigt werden die Bibliotheken [AskSinPP](https://github.com/pa-pa/AskSinPP) aus dem master-Branch.
+Benötigt werden die Bibliotheken [AskSinPP](https://github.com/pa-pa/AskSinPP) aus dem master-Branch und die [MightyCore](https://github.com/MCUdude/MightyCore).
 
 ![Einstellungen IDE](https://github.com/stan23/HB-LC-Sw2-FM/blob/master/Bilder/ArduinoIDE_Auswahl_Controller.png)
 
