@@ -66,13 +66,13 @@ uint8_t SwitchPin (uint8_t number) {
 typedef SwitchChannel<Hal, PEERS_PER_SWCHANNEL, SwList0>  SwChannel;
 typedef RemoteChannel<Hal, PEERS_PER_BTNCHANNEL, SwList0> BtnChannel;
 
-class MixDevice : public ChannelDevice<Hal, VirtBaseChannel<Hal, SwList0>, 4, SwList0> {
+class MixDevice : public ChannelDevice<Hal, VirtBaseChannel<Hal, SwList0>, 2, SwList0> {
 public:
   VirtChannel<Hal, SwChannel, SwList0>  swc1;
   VirtChannel<Hal, BtnChannel, SwList0> btc1;
 public:
   typedef VirtBaseChannel<Hal, SwList0> ChannelType;
-  typedef ChannelDevice<Hal, ChannelType, 4, SwList0> DeviceType;
+  typedef ChannelDevice<Hal, ChannelType, 2, SwList0> DeviceType;
   MixDevice (const DeviceInfo& info,uint16_t addr) : DeviceType(info, addr) {
     DeviceType::registerChannel(swc1, 1);
     DeviceType::registerChannel(btc1, 2);
