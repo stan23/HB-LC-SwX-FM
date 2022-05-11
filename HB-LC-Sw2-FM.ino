@@ -22,10 +22,8 @@
 // use MightyCore Standard pinout for ATmega32
 
 #define RELAY1_PIN 0 // PB0
-#define RELAY2_PIN 1 // PB1
 
 #define BUTTON1_PIN 24 // PA0
-#define BUTTON2_PIN 25 // PA1
 
 // number of available peers per channel
 // number of available peers per channel
@@ -39,7 +37,7 @@ using namespace as;
 const struct DeviceInfo PROGMEM devinfo = {
     {0x19,0x63,0xAC},       // Device ID
     "OEQ1663916",           // Device Serial
-    {0xF5,0x01},            // Device Model
+    {0xF5,0x02},            // Device Model
     0x01,                   // Firmware Version
     as::DeviceType::Switch, // Device Type
     {0x01,0x00}             // Info Bytes
@@ -62,9 +60,6 @@ class SwList0 : public RegList0<Reg0> {
 };
 
 uint8_t SwitchPin (uint8_t number) {
-  switch( number ) {
-    case 4: return RELAY2_PIN;
-  }
   return RELAY1_PIN;
 }
 
@@ -73,23 +68,19 @@ typedef RemoteChannel<Hal, PEERS_PER_BTNCHANNEL, SwList0> BtnChannel;
 
 class MixDevice : public ChannelDevice<Hal, VirtBaseChannel<Hal, SwList0>, 4, SwList0> {
 public:
-  VirtChannel<Hal, SwChannel, SwList0>  swc1, swc2;
-  VirtChannel<Hal, BtnChannel, SwList0> btc1, btc2;
+  VirtChannel<Hal, SwChannel, SwList0>  swc1;
+  VirtChannel<Hal, BtnChannel, SwList0> btc1;
 public:
   typedef VirtBaseChannel<Hal, SwList0> ChannelType;
   typedef ChannelDevice<Hal, ChannelType, 4, SwList0> DeviceType;
   MixDevice (const DeviceInfo& info,uint16_t addr) : DeviceType(info, addr) {
     DeviceType::registerChannel(swc1, 1);
-    DeviceType::registerChannel(swc2, 2);
-    DeviceType::registerChannel(btc1, 3);
-    DeviceType::registerChannel(btc2, 4);
+    DeviceType::registerChannel(btc1, 2);
   }
   virtual ~MixDevice () {}
 
   BtnChannel& btn1Channel () { return btc1; }
-  BtnChannel& btn2Channel () { return btc2; }
   SwChannel&  sw1Channel  () { return swc1; }
-  SwChannel&  sw2Channel  () { return swc2; }
 
   bool pollRadio () {
     bool worked = Device<Hal,SwList0>::pollRadio();
@@ -97,7 +88,7 @@ public:
       ChannelType& ch = channel(i);
       if( ch.changed() == true ) {
         // we do not send status updates during a button is pressed
-        if( btn1Channel().pressed()==false && btn2Channel().pressed()==false ) {
+        if( btn1Channel().pressed()==false ) {
           this->sendInfoActuatorStatus(this->getMasterID(),this->nextcount(),ch);
           worked = true;
         }
@@ -113,17 +104,13 @@ void setup () {
   DINIT(19200,ASKSIN_PLUS_PLUS_IDENTIFIER);
   bool firstinit = sdev.init(hal);
   sdev.sw1Channel().init(RELAY1_PIN,false);
-  sdev.sw2Channel().init(RELAY2_PIN,false);
   remoteChannelISR(sdev.btn1Channel(),BUTTON1_PIN);
-  remoteChannelISR(sdev.btn2Channel(),BUTTON2_PIN);
   if( firstinit == true ) {
     // create internal peerings
     HMID devid;
     sdev.getDeviceID(devid);
     sdev.sw1Channel().peer(Peer(devid,1));
-    sdev.sw2Channel().peer(Peer(devid,2));
-    sdev.btn1Channel().peer(Peer(devid,3));
-    sdev.btn2Channel().peer(Peer(devid,4));
+    sdev.btn1Channel().peer(Peer(devid,2));
     storage().store();
   }
   sdev.initDone();
