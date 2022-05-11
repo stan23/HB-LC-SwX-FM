@@ -10,7 +10,7 @@ Dies basiert auf der hervorragenden Arbeit von [pa-pa](https://github.com/pa-pa/
 
 # Hardware
 
-1x HM-LC-Sw1-FM oder HB-LC-Sw2-FM:)
+1x HM-LC-Sw1-FM oder HB-LC-Sw2-FM :)
 
 
 ### Programmieradapter
